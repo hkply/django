@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>aaaaaaa</h1>
+<ul>
+    {% for hero in herolist%}
+        <li>{{hero.id}}.{{hero.hname}}---{{hero.hcontent}}</li>
+    {% endfor %}
+
+</ul>
+<ul>
+    {%for book in booklist%}
+    <li>{{book.btitle}}</li>
+    {%endfor%}
+</ul>
+<!--<a href="/index/3/">index=d</a>-->
+<a href="{% url 'booktest:indexd' '88'%}">index:d</a>
+</body>
+</html>
