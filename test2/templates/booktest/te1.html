@@ -7,17 +7,24 @@
 <body>
 <h1>aaaaaaa</h1>
 <ul>
+    <h2>英雄</h2>
     {% for hero in herolist%}
         <li>{{hero.id}}.{{hero.hname}}---{{hero.hcontent}}</li>
     {% endfor %}
 
 </ul>
 <ul>
+    <h2>书籍</h2>
     {%for book in booklist%}
-    <li>{{book.btitle}}</li>
+     <!--<a href="{{book.id}}"><li>{{book.id}}.{{book.btitle}}</li></a>-->
+    <li><a href="/{{book.id}}/">{{book.btitle}}</a></li>
     {%endfor%}
+
 </ul>
 <!--<a href="/index/3/">index=d</a>-->
 <a href="{% url 'booktest:indexd' '88'%}">index:d</a>
+
+
+<a href="/showtest/">showtest</a>
 </body>
 </html>

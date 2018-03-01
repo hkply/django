@@ -7,4 +7,6 @@ urlpatterns=[
     url(r'^index/(\d+)/$',views.index1,name='indexd'),
     url(r'^te/$',views.te),
     url(r'^te1/$',views.te1),
+    url(r'^(\d+)/$',views.gethero),
+    url(r'showtest/$',views.showtest),
 ]

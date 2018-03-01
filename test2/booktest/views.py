@@ -21,3 +21,13 @@ def te1(request):
     booklist=BookInfo.objects.all()
     context={'herolist':heroa,'booklist':booklist}
     return render(request,'booktest/te1.html',context)
+
+def gethero(request,bookid):
+    bid=int(bookid)
+    book = BookInfo.objects.get(id=bid)
+    herolist=book.heroinfo_set.all()
+    context={'herolist':herolist}
+    return render(request,'booktest/showhero.html',context)
+
+def showtest(request):
+    return HttpResponse('showtest')
