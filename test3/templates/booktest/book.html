@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    {% for bo in book1 %}
+        <li>{{bo.btitle}}</li>
+    {% endfor%}
+
+</ul>
+<ul>
+    {% for he in list %}
+        <li>{{he.btitle}}</li>
+    {% endfor%}
+
+</ul>
+<ul>
+    {% for he1 in list2 %}
+        <li>{{he1.btitle}}</li>
+    {% endfor%}
+
+</ul>
+{{book2.btitle}}
+<!--book1[0].btitle:{{book1.book1.btitle}} -->
+bookcount:{{bookcount}}
+</body>
+</html>
